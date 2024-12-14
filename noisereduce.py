@@ -9,7 +9,7 @@ import numpy as np
 # Step 1: Define folder paths
 INPUT_FOLDER = "real_flight_data/audio_synced"  # Folder containing .m4a files
 WAV_FOLDER = "real_flight_data/wav_files"  # Folder to save .wav files
-DENOISED_FOLDER = "real_flight_data/denoised_files"  # Folder to save denoised .wav files
+DENOISED_FOLDER = "real_flight_data/noisereduce_denoised"  # Folder to save denoised .wav files
 
 # Ensure folders exist
 os.makedirs(WAV_FOLDER, exist_ok=True)
