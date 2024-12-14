@@ -6,8 +6,8 @@ from asteroid.models import BaseModel
 # Use the JorisCos DCCRNet-based model for single-speaker enhancement at 16kHz
 model = BaseModel.from_pretrained("JorisCos/DCCRNet_Libri1Mix_enhsingle_16k")
 
-INPUT_FOLDER = "real_flight_data/wav_files"
-OUTPUT_FOLDER = "real_flight_data/asteroid_denoised"
+INPUT_FOLDER = "real_flight_data_1214/wav_files"
+OUTPUT_FOLDER = "real_flight_data_1214/asteroid_denoised"
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 def denoise_with_asteroid(input_file, output_file):

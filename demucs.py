@@ -4,8 +4,8 @@ import subprocess
 # Denoising using demucs
 
 # Step 1: Define input and output folders
-INPUT_FOLDER = "real_flight_data/audio_synced"
-OUTPUT_FOLDER = "real_flight_data/demucs_denoised"
+INPUT_FOLDER = "real_flight_data_1214/audio_synced"
+OUTPUT_FOLDER = "real_flight_data_1214/demucs_denoised"
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 # Step 2: Run Demucs on each file
