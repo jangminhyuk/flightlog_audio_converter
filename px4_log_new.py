@@ -3,9 +3,9 @@ import pandas as pd
 from pyulog.ulog2csv import convert_ulog2csv
 
 # Directories and file settings
-ulogfilepath = 'real_flight_data/flightlog_raw'
-output_dir = 'real_flight_data/flight_csv'
-processed_dir = 'real_flight_data/flight_csv_processed'  # Directory to store processed CSV files
+ulogfilepath = 'real_flight_data_1214/flightlog_raw'
+output_dir = 'real_flight_data_1214/flight_csv'
+processed_dir = 'real_flight_data_1214/flight_csv_processed'  # Directory to store processed CSV files
 messages_type = ['actuator_outputs']
 
 # Ensure directories exist

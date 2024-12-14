@@ -94,9 +94,9 @@ def sync_tool(csv_file, audio_file, output_audio_dir):
             print("Retrying. Please enter a new start time.")
 
 # Directories for input and output
-csv_dir = "real_flight_data/flight_csv_processed"  # Folder containing flight logs
-audio_dir = "real_flight_data/audio"  # Folder containing audio files
-output_audio_dir = "real_flight_data/audio_synced"  # Output folder for synced audio files
+csv_dir = "real_flight_data_1214/flight_csv_processed"  # Folder containing flight logs
+audio_dir = "real_flight_data_1214/audio"  # Folder containing audio files
+output_audio_dir = "real_flight_data_1214/audio_synced"  # Output folder for synced audio files
 
 # Ensure output directories exist
 os.makedirs(output_audio_dir, exist_ok=True)
