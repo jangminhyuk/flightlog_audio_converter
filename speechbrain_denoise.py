@@ -6,8 +6,8 @@ from speechbrain.inference import SpectralMaskEnhancement
 
 # Define folders
 INPUT_M4A_FOLDER = "real_flight_data_1214/audio_synced"  # Input .m4a files
-WAV_FOLDER = "real_flight_data_1214/wav_files"           # Intermediate .wav files
-OUTPUT_FOLDER = "real_flight_data_1214/speechbrain_denoised"  # Output denoised .wav files
+WAV_FOLDER = "testset_1216/testset_noisy"           # Intermediate .wav files
+OUTPUT_FOLDER = "testset_1216/speechbrain_denoised"  # Output denoised .wav files
 
 # Ensure folders exist
 os.makedirs(WAV_FOLDER, exist_ok=True)
@@ -53,14 +53,14 @@ def denoise_with_speechbrain(input_file, output_file):
 # Step 3: Process all .m4a files
 def process_audio_files(m4a_folder, wav_folder, output_folder):
     # Step 3.1: Convert all .m4a to .wav
-    for file_name in os.listdir(m4a_folder):
-        if file_name.endswith(".m4a"):
-            m4a_path = os.path.join(m4a_folder, file_name)
-            wav_path = os.path.join(wav_folder, file_name.replace(".m4a", ".wav"))
-            try:
-                convert_m4a_to_wav(m4a_path, wav_path)
-            except Exception as e:
-                print(f"Error converting {file_name}: {e}")
+    # for file_name in os.listdir(m4a_folder):
+    #     if file_name.endswith(".m4a"):
+    #         m4a_path = os.path.join(m4a_folder, file_name)
+    #         wav_path = os.path.join(wav_folder, file_name.replace(".m4a", ".wav"))
+    #         try:
+    #             convert_m4a_to_wav(m4a_path, wav_path)
+    #         except Exception as e:
+    #             print(f"Error converting {file_name}: {e}")
 
     # Step 3.2: Perform SpeechBrain denoising on the .wav files
     for file_name in os.listdir(wav_folder):

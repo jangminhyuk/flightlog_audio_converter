@@ -6,8 +6,8 @@ import noisereduce as nr
 
 # Define folder paths
 INPUT_M4A_FOLDER = "real_flight_data_1214/audio_synced"
-WAV_FOLDER = "real_flight_data_1214/wav_files"
-DENOISED_FOLDER = "real_flight_data_1214/noisereduce_denoised"
+WAV_FOLDER = "testset_1216/testset_noisy"
+DENOISED_FOLDER = "testset_1216/noisereduce_denoised"
 
 os.makedirs(WAV_FOLDER, exist_ok=True)
 os.makedirs(DENOISED_FOLDER, exist_ok=True)
@@ -46,14 +46,14 @@ def reduce_noise(input_wav, output_wav):
 # Step 3: Process all .m4a files
 def process_audio_files(m4a_folder, wav_folder, denoised_folder):
     # Step 3.1: Convert all .m4a files to .wav
-    for file_name in os.listdir(m4a_folder):
-        if file_name.endswith(".m4a"):
-            m4a_path = os.path.join(m4a_folder, file_name)
-            wav_path = os.path.join(wav_folder, file_name.replace(".m4a", ".wav"))
-            try:
-                convert_m4a_to_wav(m4a_path, wav_path)
-            except Exception as e:
-                print(f"Error converting {file_name}: {e}")
+    # for file_name in os.listdir(m4a_folder):
+    #     if file_name.endswith(".m4a"):
+    #         m4a_path = os.path.join(m4a_folder, file_name)
+    #         wav_path = os.path.join(wav_folder, file_name.replace(".m4a", ".wav"))
+    #         try:
+    #             convert_m4a_to_wav(m4a_path, wav_path)
+    #         except Exception as e:
+    #             print(f"Error converting {file_name}: {e}")
 
     # Step 3.2: Apply noise reduction on .wav files
     for file_name in os.listdir(wav_folder):

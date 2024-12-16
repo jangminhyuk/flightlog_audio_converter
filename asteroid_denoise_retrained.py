@@ -6,8 +6,8 @@ from asteroid.models import BaseModel
 import numpy as np
 
 # Define constants
-INPUT_FOLDER = "real_flight_data_1214/wav_files"
-OUTPUT_FOLDER = "real_flight_data_1214/asteroid_retrained_denoised"
+INPUT_FOLDER = "testset_1216/testset_noisy"
+OUTPUT_FOLDER = "testset_1216/asteroid_retrained_denoised"
 BEST_MODEL_PATH = "dccrnet_best_model.pth"  # Path to your saved model
 SAMPLE_RATE = 16000  # Fixed sample rate
 SEGMENT_DURATION = 5  # Duration of each segment in seconds
